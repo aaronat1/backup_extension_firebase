@@ -7,6 +7,7 @@ description: >-
   schedule. Supports full database exports or per-collection exports, giving you
   reliable automated backups with zero manual intervention.
 license: Apache-2.0
+stage: stable
 icon: icon.png
 author:
   authorName: aaronat1
