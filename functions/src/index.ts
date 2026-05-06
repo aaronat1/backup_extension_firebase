@@ -7,9 +7,11 @@ admin.initializeApp();
 const BACKUP_BUCKET = process.env.BACKUP_BUCKET ?? "";
 const COLLECTIONS_RAW = process.env.COLLECTIONS_TO_BACKUP ?? "";
 const BACKUP_LOG_COLLECTION = process.env.BACKUP_LOG_COLLECTION ?? "_ext_backup_logs";
-const PROJECT_ID = process.env.GCLOUD_PROJECT ?? process.env.FIREBASE_CONFIG
-  ? JSON.parse(process.env.FIREBASE_CONFIG ?? "{}").projectId
-  : "";
+const PROJECT_ID =
+  process.env.GCLOUD_PROJECT ??
+  (process.env.FIREBASE_CONFIG
+    ? JSON.parse(process.env.FIREBASE_CONFIG).projectId
+    : "");
 
 async function runExport(): Promise<void> {
   if (!BACKUP_BUCKET) {

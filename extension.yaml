@@ -1,5 +1,5 @@
 name: firestore-backup-scheduler
-version: 0.1.2
+version: 0.1.3
 specVersion: v1beta
 displayName: Firestore Backup Scheduler
 description: >-
@@ -18,6 +18,8 @@ billingRequired: true
 roles:
   - role: datastore.importExportAdmin
     reason: Required to export Firestore data to Cloud Storage.
+  - role: datastore.user
+    reason: Required to write backup log entries to Firestore.
   - role: storage.admin
     reason: Required to write export files to the configured Cloud Storage bucket.
 

@@ -1,3 +1,8 @@
+## Version 0.1.3
+
+- Fix: add `datastore.user` role so the service account can write backup logs to Firestore.
+- Fix: operator precedence bug in PROJECT_ID resolution.
+
 ## Version 0.1.2
 
 - Upgrade Node.js engine from 18 to 20.
